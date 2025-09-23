@@ -1,0 +1,69 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Servicio Social – Admin",
+      "type": "Dashboard",
+      "tech": ["PHP", "MySQL", "DataTables", "Bootstrap"],
+      "summary": "Backoffice para gestionar alumnos, eventos y constancias.",
+      "problem": "Procesos manuales lentos y propensos a errores.",
+      "solution": "API PHP + MySQL optimizado e interfaz con DataTables.",
+      "impact": "Reducción 65% del tiempo operativo; mejores reportes.",
+      "demo": "#",
+      "code": "#",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "UNIMO – API Transporte",
+      "type": "API",
+      "tech": ["PHP", "MySQL", "JWT"],
+      "summary": "API REST para rutas, buses, QR de abordaje y asistencia.",
+      "problem": "Sin sincronización entre app móvil y panel administrativo.",
+      "solution": "Endpoints seguros con JWT y paginación para móviles.",
+      "impact": "Seguimiento en tiempo real y control de cupos.",
+      "demo": "#",
+      "code": "#",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "AterrizaYa – Landing SaaS",
+      "type": "Sitio",
+      "tech": ["PHP", "JavaScript"],
+      "summary": "Constructor simple de landing pages con tiers y pagos.",
+      "problem": "Crear landing profesionales rápido y a bajo costo.",
+      "solution": "Plantillas modulares + componentes reutilizables.",
+      "impact": "Time-to-market de horas en vez de días.",
+      "demo": "#",
+      "code": "#",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Emailer – Campaigns",
+      "type": "Dashboard",
+      "tech": ["PHP", "MySQL", "Quill", "PHPMailer"],
+      "summary": "Envío masivo con plantillas y adjuntos.",
+      "problem": "Baja entregabilidad y sin personalización.",
+      "solution": "SMTP + plantillas HTML + colas para lotes.",
+      "impact": "Aperturas +25% y reducción de rebotes.",
+      "demo": "#",
+      "code": "#",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "title": "DevHub – Gestor XAMPP",
+      "type": "Dashboard",
+      "tech": ["PHP", "JavaScript"],
+      "summary": "Lanza y organiza proyectos locales con UX tipo iOS.",
+      "problem": "Desorganización de proyectos y context-switching.",
+      "solution": "Índice con lectura de README y accesos rápidos.",
+      "impact": "Menos fricción al cambiar de proyecto.",
+      "demo": "#",
+      "code": "#",
+      "featured": false
+    }
+  ]
+}

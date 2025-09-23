@@ -1,0 +1,27 @@
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.smooth {
+    transition: all .2s ease;
+}
+
+.glass {
+    backdrop-filter: saturate(180%) blur(10px);
+    background-color: rgba(255, 255, 255, .6);
+}
+
+.dark .glass {
+    background-color: rgba(17, 24, 39, .5);
+}
+
+.typing-caret::after {
+    content: "▌";
+    animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
