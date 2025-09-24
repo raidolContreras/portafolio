@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" class="h-full">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,7 +25,7 @@
           document.head.appendChild(meta);
         }
         meta.setAttribute('content', isDark ? 'dark light' : 'light dark');
-      } catch (e) {}
+      } catch (e) { }
     })();
   </script>
 
@@ -37,8 +38,8 @@
         extend: {
           colors: {
             brand: {
-              50:'#effbf5',100:'#d8f5e7',200:'#b2ebcf',300:'#86ddb4',400:'#47c989',
-              500:'#22b071',600:'#17905e',700:'#137350',800:'#115c41',900:'#0e4a36'
+              50: '#effbf5', 100: '#d8f5e7', 200: '#b2ebcf', 300: '#86ddb4', 400: '#47c989',
+              500: '#22b071', 600: '#17905e', 700: '#137350', 800: '#115c41', 900: '#0e4a36'
             }
           },
           boxShadow: { soft: '0 10px 30px -12px rgba(0,0,0,0.25)' }
@@ -49,16 +50,20 @@
 
   <link rel="stylesheet" href="public/css/styles.css">
 </head>
-<body class="h-full bg-gradient-to-b from-white to-slate-50 text-slate-800 dark:bg-slate-900 dark:from-slate-900 dark:to-slate-950 dark:text-slate-100">
+
+<body
+  class="h-full bg-gradient-to-b from-white to-slate-50 text-slate-800 dark:bg-slate-900 dark:from-slate-900 dark:to-slate-950 dark:text-slate-100">
 
   <!-- Header -->
-  <header class="sticky top-0 z-30 bg-white/80 dark:bg-slate-900/70 glass border-b border-slate-200/60 dark:border-slate-700/60">
+  <header
+    class="sticky top-0 z-30 bg-white/80 dark:bg-slate-900/70 glass border-b border-slate-200/60 dark:border-slate-700/60">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-3">
       <div class="flex items-center gap-2">
         <div class="w-9 h-9 rounded-xl bg-brand-500 text-white grid place-items-center font-bold">OR</div>
         <div class="text-sm leading-tight">
           <div class="font-semibold" id="profileName">Oscar Rafael Contreras</div>
-          <div class="text-xs text-slate-500 dark:text-slate-400" id="profileBio">PHP Backend · APIs · MySQL · DataTables</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400" id="profileBio">PHP Backend · APIs · MySQL ·
+            DataTables</div>
         </div>
       </div>
       <nav class="ml-auto hidden md:flex items-center gap-5 text-sm">
@@ -68,8 +73,11 @@
         <a href="#contacto" class="hover:text-brand-600">Contacto</a>
       </nav>
       <div class="ml-3 flex items-center gap-2">
-        <button id="themeBtn" class="smooth px-3 py-1.5 rounded-lg border text-sm border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800" title="Alternar tema">🌙</button>
-        <a href="#" id="cvBtn" class="px-3 py-1.5 rounded-lg bg-brand-600 text-white text-sm shadow-soft hover:bg-brand-700">Descargar CV</a>
+        <button id="themeBtn"
+          class="smooth px-3 py-1.5 rounded-lg border text-sm border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800"
+          title="Alternar tema">🌙</button>
+        <a href="#" id="cvBtn"
+          class="px-3 py-1.5 rounded-lg bg-brand-600 text-white text-sm shadow-soft hover:bg-brand-700">Descargar CV</a>
       </div>
     </div>
   </header>
@@ -87,14 +95,31 @@
         </p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="#proyectos" class="px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Ver proyectos</a>
-          <a href="#github" class="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">Actividad GitHub</a>
+          <a href="#github"
+            class="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">Actividad
+            GitHub</a>
         </div>
         <!-- <div class="mt-6 text-xs text-slate-500">Todos los datos son reales.</div> -->
       </div>
-      <div class="relative">
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-2 shadow-soft bg-white dark:bg-slate-800">
-          <div class="rounded-xl bg-slate-900 text-slate-100 text-sm p-3 font-mono overflow-auto h-64" id="terminal"></div>
+      <div class="rounded-xl border border-slate-200 dark:border-slate-700 shadow-soft overflow-hidden bg-slate-900">
+        <!-- Barra estilo mac -->
+        <div class="flex items-center h-9 px-3 gap-3 bg-slate-800/90 dark:bg-slate-800">
+          <div class="flex items-center gap-2">
+            <span class="mac-dot inline-block rounded-full w-3 h-3 bg-[#ff5f57]" aria-hidden="true"></span>
+            <span class="mac-dot inline-block rounded-full w-3 h-3 bg-[#febc2e]" aria-hidden="true"></span>
+            <span class="mac-dot inline-block rounded-full w-3 h-3 bg-[#28c840]" aria-hidden="true"></span>
+          </div>
+
+          <div class="ml-auto">
+            <button id="terminalToggle"
+              class="px-2 py-1 rounded-lg text-xs border border-slate-600/50 bg-slate-700/60 text-slate-100 hover:bg-slate-700">
+              ⏸
+            </button>
+          </div>
         </div>
+
+        <!-- Contenido de la terminal -->
+        <div id="terminal" class="text-slate-100 text-sm p-3 font-mono overflow-auto h-64"></div>
       </div>
     </div>
   </section>
@@ -108,10 +133,13 @@
       </div>
       <div class="flex flex-wrap gap-2 items-center">
         <div class="relative">
-          <input id="searchInput" class="w-60 md:w-72 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2 text-sm" placeholder="Buscar proyecto…" />
+          <input id="searchInput"
+            class="w-60 md:w-72 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2 text-sm"
+            placeholder="Buscar proyecto…" />
           <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">⌘K</span>
         </div>
-        <select id="techFilter" class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2 text-sm">
+        <select id="techFilter"
+          class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2 text-sm">
           <option value="">Todas las tecnologías</option>
           <option>PHP</option>
           <option>Laravel</option>
@@ -119,7 +147,8 @@
           <option>JavaScript</option>
           <option>DataTables</option>
         </select>
-        <select id="typeFilter" class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2 text-sm">
+        <select id="typeFilter"
+          class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2 text-sm">
           <option value="">Todos los tipos</option>
           <option>API</option>
           <option>Dashboard</option>
@@ -138,13 +167,15 @@
         <p class="text-sm text-slate-500">Repositorios (mock) ordenados por actualización.</p>
       </div>
       <div class="flex gap-2">
-        <select id="langFilter" class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2 text-sm">
+        <select id="langFilter"
+          class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2 text-sm">
           <option value="">Todos los lenguajes</option>
           <option>PHP</option>
           <option>JavaScript</option>
           <option>HTML</option>
         </select>
-        <input id="repoSearch" placeholder="Buscar repo…" class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2 text-sm" />
+        <input id="repoSearch" placeholder="Buscar repo…"
+          class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2 text-sm" />
       </div>
     </div>
     <div id="reposGrid" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
@@ -158,11 +189,13 @@
 
   <!-- Contacto -->
   <section id="contacto" class="max-w-6xl mx-auto px-4 py-14">
-    <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 md:p-8 bg-white dark:bg-slate-800 shadow-soft">
+    <div
+      class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6 md:p-8 bg-white dark:bg-slate-800 shadow-soft">
       <div class="flex flex-col md:flex-row gap-6 items-start">
         <div class="md:w-1/2">
           <h3 class="text-xl font-semibold">¿Tienes un proyecto?</h3>
-          <p class="text-slate-600 dark:text-slate-300 mt-2">Cuéntame el reto y te propongo arquitectura, tiempos y entregables.</p>
+          <p class="text-slate-600 dark:text-slate-300 mt-2">Cuéntame el reto y te propongo arquitectura, tiempos y
+            entregables.</p>
           <ul class="mt-4 text-sm list-disc pl-6 space-y-1 text-slate-600 dark:text-slate-300">
             <li>APIs REST en PHP 8.x</li>
             <li>Optimización MySQL (índices, EXPLAIN, caché)</li>
@@ -171,11 +204,17 @@
           </ul>
         </div>
         <form id="contactForm" class="md:w-1/2 grid gap-3">
-          <input class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" placeholder="Tu nombre" required>
-          <input type="email" class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" placeholder="Email" required>
-          <textarea rows="4" class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" placeholder="Mensaje" required></textarea>
+          <input class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2"
+            placeholder="Tu nombre" required>
+          <input type="email"
+            class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2"
+            placeholder="Email" required>
+          <textarea rows="4"
+            class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2"
+            placeholder="Mensaje" required></textarea>
           <div class="flex items-center justify-between mt-1">
-            <label class="text-sm flex items-center gap-2"><input type="checkbox" class="accent-brand-600" required> Acepto la política de privacidad</label>
+            <label class="text-sm flex items-center gap-2"><input type="checkbox" class="accent-brand-600" required>
+              Acepto la política de privacidad</label>
             <button class="px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white">Enviar</button>
           </div>
           <div id="contactToast" class="hidden text-sm text-green-600">¡Gracias! Te responderé a la brevedad.</div>
@@ -184,12 +223,14 @@
     </div>
   </section>
 
-  <footer class="py-10 text-center text-xs text-slate-500">© <span id="year"></span> Portafolio Oscar Contreras · Devosco.io</footer>
+  <footer class="py-10 text-center text-xs text-slate-500">© <span id="year"></span> Portafolio Oscar Contreras ·
+    Devosco.io</footer>
 
   <!-- Modal de proyecto -->
   <div id="projectModal" class="hidden fixed inset-0 z-50 grid place-items-center p-4">
     <div class="absolute inset-0 bg-black/50" data-modal-close></div>
-    <div class="relative w-full max-w-2xl rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-soft overflow-hidden">
+    <div
+      class="relative w-full max-w-2xl rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-soft overflow-hidden">
       <div class="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">
         <h3 id="modalTitle" class="text-lg font-semibold">Título</h3>
         <button class="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" data-modal-close>✕</button>
@@ -212,8 +253,11 @@
         </div>
         <div id="modalBadges" class="flex flex-wrap gap-2"></div>
         <div class="flex gap-3 pt-2">
-          <a id="modalDemo" href="#" target="_blank" class="px-3 py-2 rounded-lg bg-brand-600 text-white text-sm hover:bg-brand-700">Ver demo</a>
-          <a id="modalCode" href="#" target="_blank" class="px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-sm hover:bg-slate-50 dark:hover:bg-slate-800">Ver código</a>
+          <a id="modalDemo" href="#" target="_blank"
+            class="px-3 py-2 rounded-lg bg-brand-600 text-white text-sm hover:bg-brand-700">Ver demo</a>
+          <a id="modalCode" href="#" target="_blank"
+            class="px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-sm hover:bg-slate-50 dark:hover:bg-slate-800">Ver
+            código</a>
         </div>
       </div>
     </div>
@@ -222,4 +266,5 @@
   <!-- App -->
   <script type="module" src="public/js/main.js"></script>
 </body>
+
 </html>

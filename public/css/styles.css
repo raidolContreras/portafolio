@@ -25,3 +25,20 @@
         opacity: 0;
     }
 }
+
+/* en tu styles.css */
+.typing-caret {
+  display: inline-block;
+  width: 0.6ch;
+  border-right: 2px solid currentColor;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink { 50% { border-color: transparent; } }
+
+/* puntitos estilo mac: un poco de relieve */
+.mac-dot {
+  box-shadow:
+    inset 0 -1px 0 rgba(0,0,0,.25),
+    inset 0  1px 0 rgba(255,255,255,.18);
+}
+.mac-dot:hover { filter: brightness(1.05); }
