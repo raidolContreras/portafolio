@@ -2,7 +2,7 @@
   "projects": [
     {
       "id": 1,
-      "title": "Servicio Social – Admin",
+      "title": "Servicio Social y Practicas profesionales – UNIMO",
       "type": "Dashboard",
       "tech": ["PHP", "MySQL", "DataTables", "Bootstrap"],
       "summary": "Backoffice para gestionar alumnos, eventos y constancias.",
